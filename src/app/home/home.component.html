@@ -1,0 +1,16 @@
+<div class="todoContainer py-4">
+    <div class="todoBox">
+        <!-- <input type="text" class="inputBoxStyle" (keyup)="getValue($event)"> -->
+        <input type="text" class="inputBoxStyle" [(ngModel)]="task">
+        <button [ngClass]="isEdit?'btn btn-info':'btn btn-primary'" (click)="addTodo()">{{isEdit?"Save":"Add"}}</button>
+    </div>
+    <div *ngFor="let todo of tasks;let i=index;" class="todoStyle mt-3">
+            <p class="textStyle">{{todo}}</p>
+            <div style="height: fit-content;">
+                <button class="btnStyle" (click)="editTodo(i)"><i class="fas fa-edit" style="color: green;"></i></button>
+                <button class="btnStyle" (click)="deleteTodo(i)"><i class="fa fa-trash" aria-hidden="true" style="max-height: 5px;color: red;"></i>
+                </button>
+            </div>
+    </div>
+    <button class=" btn btn-danger mt-3" (click)="deleteAllTodo()">Clear All</button>
+</div>

@@ -1,0 +1,47 @@
+.todoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.todoBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.inputBoxStyle{
+    height: 5vh;
+    width: 25vw;
+    font-size: 16px;
+}
+.todoStyle{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30vw;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    max-height: max-content;
+}
+.btnStyle{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    max-height: fit-content;
+}
+.textStyle{
+    height: fit-content;
+    font-size: 20px;
+}
+.saveStyle{
+    background-color: red;
+    color: white;
+}
+.addStyle{
+    background-color: brown;
+    color: white;
+}
